@@ -344,4 +344,4 @@ pnpm add "link:<仓库目录>"
 
 ---
 
-需要更细的操作细节（怎么改价、怎么排查徽标不出现），看 README.md 与 skill/references/。
+需要更细的操作细节（怎么改价、怎么排查徽标不出现），看 [README](README.md) 与 [skills](skill/references/)。

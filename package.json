@@ -1,0 +1,61 @@
+{
+  "name": "@local/dsh-usage-cost",
+  "version": "1.5.0",
+  "description": "DeepSeek Harness 客户端插件：在输入框下方显示本会话的 token 成本徽标（多模型/多币种/分时定价）。",
+  "type": "module",
+  "license": "MIT",
+  "author": "your-name",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/<your-org>/dsh-usage-cost.git"
+  },
+  "homepage": "https://github.com/<your-org>/dsh-usage-cost#readme",
+  "bugs": {
+    "url": "https://github.com/<your-org>/dsh-usage-cost/issues"
+  },
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "plugin",
+    "cordis",
+    "cost",
+    "pricing",
+    "tokens",
+    "llm"
+  ],
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js"
+  },
+  "files": [
+    "client.js",
+    "index.js",
+    "cordis.patch.yml",
+    "pricing.json",
+    "pricing.schema.json",
+    "README.md",
+    "GUIDE.md",
+    "docs",
+    "skill",
+    "LICENSE"
+  ],
+  "scripts": {
+    "gen": "node scripts/gen-pricing.mjs",
+    "check": "node --check client.js && node --check index.js && node scripts/gen-pricing.mjs --check && node scripts/gen-tables.mjs --check && node scripts/validate.mjs"
+  },
+  "dsh": {
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-conversation"
+      ]
+    },
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

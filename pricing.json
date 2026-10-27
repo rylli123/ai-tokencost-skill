@@ -1,0 +1,822 @@
+{
+  "$schema": "./pricing.schema.json",
+  "version": 2,
+  "updatedAt": "2026-10-27",
+  "unit": "per_million_tokens",
+  "defaultCurrency": "CNY",
+  "sources": {
+    "deepseek": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "kimi": "https://platform.kimi.com/docs/pricing/chat",
+    "benchgecko": "https://benchgecko.ai/models (as of 2026-10-26, CC BY 4.0)"
+  },
+  "rates": [
+    {
+      "id": "deepseek-flash",
+      "provider": "deepseek",
+      "label": "DeepSeek-V41-Flash",
+      "aliases": [
+        "deepseek-v4-flash",
+        "deepseek-v4-flash-vision-exp",
+        "deepseek-chat"
+      ],
+      "currency": "CNY",
+      "cacheHit": 0.02,
+      "cacheMiss": 1,
+      "output": 4,
+      "cacheWrite": 0,
+      "band": "cn-business",
+      "status": "verified",
+      "cacheHitSource": "measured",
+      "source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+      "checkedAt": "2026-10-27",
+      "rank": null,
+      "note": "官方分时价，空闲=高峰/2"
+    },
+    {
+      "id": "deepseek-v4-pro",
+      "provider": "deepseek",
+      "label": "DeepSeek-V4-Pro",
+      "aliases": [
+        "deepseek-pro",
+        "deepseek-reasoner"
+      ],
+      "currency": "CNY",
+      "cacheHit": 0.15,
+      "cacheMiss": 4.5,
+      "output": 13.5,
+      "cacheWrite": 0,
+      "band": "cn-business",
+      "status": "verified",
+      "cacheHitSource": "measured",
+      "source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+      "checkedAt": "2026-10-27",
+      "rank": null
+    },
+    {
+      "id": "gpt-5-5-pro",
+      "provider": "openai",
+      "label": "GPT-5.5 Pro",
+      "aliases": [
+        "gpt-5.5-pro"
+      ],
+      "currency": "USD",
+      "cacheHit": 3,
+      "cacheMiss": 30,
+      "output": 180,
+      "cacheWrite": 0,
+      "band": null,
+      "status": "unverified",
+      "cacheHitSource": "estimated",
+      "source": "benchgecko",
+      "checkedAt": "2026-10-26",
+      "rank": 2,
+      "benchScore": 98.3,
+      "benchRank": 2
+    },
+    {
+      "id": "gpt-6-astra",
+      "provider": "openai",
+      "label": "GPT-6 Astra",
+      "aliases": [
+        "gpt-6-astra",
+        "gpt6-astra"
+      ],
+      "currency": "USD",
+      "cacheHit": 1,
+      "cacheMiss": 10,
+      "output": 50,
+      "cacheWrite": 0,
+      "band": null,
+      "status": "unverified",
+      "cacheHitSource": "estimated",
+      "source": "benchgecko",
+      "checkedAt": "2026-10-26",
+      "rank": 3,
+      "benchScore": 95.8,
+      "benchRank": 3
+    },
+    {
+      "id": "deepseek-v3-2-speciale",
+      "provider": "deepseek",
+      "label": "DeepSeek V3.2 Speciale",
+      "aliases": [
+        "deepseek-v3.2-speciale"
+      ],
+      "currency": "USD",
+      "cacheHit": 0.04,
+      "cacheMiss": 0.4,
+      "output": 1.2,
+      "cacheWrite": 0,
+      "band": null,
+      "status": "unverified",
+      "cacheHitSource": "estimated",
+      "source": "benchgecko",
+      "checkedAt": "2026-10-26",
+      "rank": 4,
+      "note": "开源权重，聚合站美元价",
+      "benchScore": 95.2,
+      "benchRank": 4
+    },
+    {
+      "id": "gpt-6-1-sol",
+      "provider": "openai",
+      "label": "GPT-6.1 Sol",
+      "aliases": [
+        "gpt-6.1-sol",
+        "gpt-6-1"
+      ],
+      "currency": "USD",
+      "cacheHit": 0.1,
+      "cacheMiss": 2,
+      "output": 10,
+      "cacheWrite": 0,
+      "band": null,
+      "status": "unverified",
+      "cacheHitSource": "measured",
+      "source": "benchgecko",
+      "checkedAt": "2026-10-26",
+      "rank": 5,
+      "note": "flex 档 1/5；fast 4/20；ultrafast 12/60",
+      "benchScore": 93.4,
+      "benchRank": 5
+    },
+    {
+      "id": "claude-opus-5-5",
+      "provider": "anthropic",
+      "label": "Claude Opus 5.5",
+      "aliases": [
+        "claude-opus-5.5",
+        "claude-opus-5-5-latest"
+      ],
+      "currency": "USD",
+      "cacheHit": 0.2,
+      "cacheMiss": 4,
+      "output": 20,
+      "cacheWrite": 5,
+      "band": null,
+      "status": "verified",
+      "cacheHitSource": "measured",
+      "source": "https://bestagent.dev/zh/agent-cache-pricing-measured-2026/",
+      "checkedAt": "2026-10-27",
+      "rank": 6,
+      "note": "缓存读 0.05×（特例）；5min 写入 1.25×、1h 写入 2×；Batch /",
+      "tokenizerTaxPct": 73,
+      "benchScore": 91.8,
+      "benchRank": 6,
+      "cacheWrite1h": 8
+    },
+    {
+      "id": "step-3-5-flash",
+      "provider": "stepfun",
+      "label": "Step 3.5 Flash",
+      "aliases": [
+        "step-3.5-flash"
+      ],
+      "currency": "USD",
+      "cacheHit": 0.01,
+      "cacheMiss": 0.1,
+      "output": 0.3,
+      "cacheWrite": 0,
+      "band": null,
+      "status": "unverified",
+      "cacheHitSource": "estimated",
+      "source": "benchgecko",
+      "checkedAt": "2026-10-26",
+      "rank": 7,
+      "note": "开源权重",
+      "benchScore": 89.5,
+      "benchRank": 7
+    },
+    {
+      "id": "gemini-4-argon",
+      "provider": "google",
+      "label": "Gemini 4 Argon",
+      "aliases": [
+        "gemini-4-argon"
+      ],
+      "currency": "USD",
+      "cacheHit": 0.5,
+      "cacheMiss": 2,
+      "output": 10,
+      "cacheWrite": 0,
+      "band": null,
+      "status": "unverified",
+      "cacheHitSource": "estimated",
+      "source": "benchgecko",
+      "checkedAt": "2026-10-26",
+      "rank": 8,
+      "benchScore": 89.2,
+      "benchRank": 8
+    },
+    {
+      "id": "gpt-5-chat",
+      "provider": "openai",
+      "label": "GPT-5 Chat",
+      "aliases": [
+        "gpt-5-chat-latest"
+      ],
+      "currency": "USD",
+      "cacheHit": 0.125,
+      "cacheMiss": 1.25,
+      "output": 10,
+      "cacheWrite": 0,
+      "band": null,
+      "status": "unverified",
+      "cacheHitSource": "measured",
+      "source": "benchgecko",
+      "checkedAt": "2026-10-26",
+      "rank": 9,
+      "benchScore": 89,
+      "benchRank": 9
+    },
+    {
+      "id": "gpt-5-1-codex-max",
+      "provider": "openai",
+      "label": "GPT-5.1-Codex-Max",
+      "aliases": [
+        "gpt-5.1-codex-max"
+      ],
+      "currency": "USD",
+      "cacheHit": 0.125,
+      "cacheMiss": 1.25,
+      "output": 10,
+      "cacheWrite": 0,
+      "band": null,
+      "status": "unverified",
+      "cacheHitSource": "estimated",
+      "source": "benchgecko",
+      "checkedAt": "2026-10-26",
+      "rank": 12,
+      "benchScore": 85.6,
+      "benchRank": 12
+    },
+    {
+      "id": "claude-opus-5",
+      "provider": "anthropic",
+      "label": "Claude Opus 5",
+      "aliases": [
+        "claude-opus-5-latest"
+      ],
+      "currency": "USD",
+      "cacheHit": 0.5,
+      "cacheMiss": 5,
+      "output": 25,
+      "cacheWrite": 6.25,
+      "band": null,
+      "status": "unverified",
+      "cacheHitSource": "estimated",
+      "source": "benchgecko",
+      "checkedAt": "2026-10-26",
+      "rank": 13,
+      "benchScore": 84.6,
+      "benchRank": 13,
+      "cacheWrite1h": 10,
+      "note": "缓存读 0.1×；1h 写入 2×"
+    },
+    {
+      "id": "claude-fable-5-1",
+      "provider": "anthropic",
+      "label": "Claude Fable 5.1",
+      "aliases": [
+        "claude-fable-5.1",
+        "claude-fable-5-1-latest"
+      ],
+      "currency": "USD",
+      "cacheHit": 0.25,
+      "cacheMiss": 10,
+      "output": 50,
+      "cacheWrite": 12.5,
+      "band": null,
+      "status": "verified",
+      "cacheHitSource": "measured",
+      "source": "https://blog.laozhang.ai/zh/posts/claude-fable-5-1-api-pricing",
+      "checkedAt": "2026-10-27",
+      "rank": 14,
+      "note": "缓存读 0.025×（特例）；5min 写入 1.25×、1h 写入 2×；Batch /",
+      "tokenizerTaxPct": 73,
+      "benchScore": 84.1,
+      "benchRank": 14,
+      "cacheWrite1h": 20
+    },
+    {
+      "id": "claude-opus-4-6-fast",
+      "provider": "anthropic",
+      "label": "Claude Opus 4.6 (Fast)",
+      "aliases": [
+        "claude-opus-4-6-fast"
+      ],
+      "currency": "USD",
+      "cacheHit": 3,
+      "cacheMiss": 30,
+      "output": 150,
+      "cacheWrite": 37.5,
+      "band": null,
+      "status": "unverified",
+      "cacheHitSource": "estimated",
+      "source": "benchgecko",
+      "checkedAt": "2026-10-26",
+      "rank": 15,
+      "benchScore": 83.3,
+      "benchRank": 15
+    },
+    {
+      "id": "claude-fable-5",
+      "provider": "anthropic",
+      "label": "Claude Fable 5",
+      "aliases": [
+        "claude-fable-5-latest"
+      ],
+      "currency": "USD",
+      "cacheHit": 0.5,
+      "cacheMiss": 10,
+      "output": 50,
+      "cacheWrite": 12.5,
+      "band": null,
+      "status": "unverified",
+      "cacheHitSource": "estimated",
+      "source": "benchgecko",
+      "checkedAt": "2026-10-26",
+      "rank": 16,
+      "benchScore": 82,
+      "benchRank": 16,
+      "cacheWrite1h": 20
+    },
+    {
+      "id": "mimo-v2-flash",
+      "provider": "xiaomi",
+      "label": "MiMo-V2-Flash",
+      "aliases": [
+        "mimo-v2-flash"
+      ],
+      "currency": "USD",
+      "cacheHit": 0.009,
+      "cacheMiss": 0.09,
+      "output": 0.29,
+      "cacheWrite": 0,
+      "band": null,
+      "status": "unverified",
+      "cacheHitSource": "estimated",
+      "source": "benchgecko",
+      "checkedAt": "2026-10-26",
+      "rank": 18,
+      "note": "开源权重",
+      "benchScore": 81.7,
+      "benchRank": 18
+    },
+    {
+      "id": "claude-sonnet-5-5",
+      "provider": "anthropic",
+      "label": "Claude Sonnet 5.5",
+      "aliases": [
+        "claude-sonnet-5.5",
+        "claude-sonnet-5-5-latest"
+      ],
+      "currency": "USD",
+      "cacheHit": 0.1,
+      "cacheMiss": 2,
+      "output": 10,
+      "cacheWrite": 2.5,
+      "band": null,
+      "status": "unverified",
+      "cacheHitSource": "estimated",
+      "source": "benchgecko",
+      "checkedAt": "2026-10-26",
+      "rank": 19,
+      "benchScore": 81.7,
+      "benchRank": 19,
+      "note": "缓存读自 2026-10-07 由 .20 降至 .10"
+    },
+    {
+      "id": "gpt-5-2-codex",
+      "provider": "openai",
+      "label": "GPT-5.2-Codex",
+      "aliases": [
+        "gpt-5.2-codex"
+      ],
+      "currency": "USD",
+      "cacheHit": 0.175,
+      "cacheMiss": 1.75,
+      "output": 14,
+      "cacheWrite": 0,
+      "band": null,
+      "status": "unverified",
+      "cacheHitSource": "estimated",
+      "source": "benchgecko",
+      "checkedAt": "2026-10-26",
+      "rank": 20,
+      "benchScore": 80.7,
+      "benchRank": 20
+    },
+    {
+      "id": "gpt-5-4-pro",
+      "provider": "openai",
+      "label": "GPT-5.4 Pro",
+      "aliases": [
+        "gpt-5.4-pro"
+      ],
+      "currency": "USD",
+      "cacheHit": 3,
+      "cacheMiss": 30,
+      "output": 180,
+      "cacheWrite": 0,
+      "band": null,
+      "status": "unverified",
+      "cacheHitSource": "estimated",
+      "source": "benchgecko",
+      "checkedAt": "2026-10-26",
+      "rank": 21,
+      "benchScore": 79.7,
+      "benchRank": 21
+    },
+    {
+      "id": "gpt-5-6-sol",
+      "provider": "openai",
+      "label": "GPT-5.6 Sol",
+      "aliases": [
+        "gpt-5.6-sol"
+      ],
+      "currency": "USD",
+      "cacheHit": 0.2,
+      "cacheMiss": 2,
+      "output": 10,
+      "cacheWrite": 0,
+      "band": null,
+      "status": "unverified",
+      "cacheHitSource": "estimated",
+      "source": "benchgecko",
+      "checkedAt": "2026-10-26",
+      "rank": 23,
+      "benchScore": 78.9,
+      "benchRank": 23
+    },
+    {
+      "id": "gpt-6-sol",
+      "provider": "openai",
+      "label": "GPT-6 Sol",
+      "aliases": [
+        "gpt-6-sol"
+      ],
+      "currency": "USD",
+      "cacheHit": 0.2,
+      "cacheMiss": 2,
+      "output": 10,
+      "cacheWrite": 0,
+      "band": null,
+      "status": "unverified",
+      "cacheHitSource": "estimated",
+      "source": "benchgecko",
+      "checkedAt": "2026-10-26",
+      "rank": 24,
+      "benchScore": 77.9,
+      "benchRank": 24
+    },
+    {
+      "id": "gpt-5-1-codex",
+      "provider": "openai",
+      "label": "GPT-5.1-Codex",
+      "aliases": [
+        "gpt-5.1-codex"
+      ],
+      "currency": "USD",
+      "cacheHit": 0.125,
+      "cacheMiss": 1.25,
+      "output": 10,
+      "cacheWrite": 0,
+      "band": null,
+      "status": "unverified",
+      "cacheHitSource": "estimated",
+      "source": "benchgecko",
+      "checkedAt": "2026-10-26",
+      "rank": 25,
+      "benchScore": 77.7,
+      "benchRank": 25
+    },
+    {
+      "id": "grok-build-0-1",
+      "provider": "xai",
+      "label": "Grok Build 0.1",
+      "aliases": [
+        "grok-build-0.1"
+      ],
+      "currency": "USD",
+      "cacheHit": 0.1,
+      "cacheMiss": 1,
+      "output": 2,
+      "cacheWrite": 0,
+      "band": null,
+      "status": "unverified",
+      "cacheHitSource": "estimated",
+      "source": "benchgecko",
+      "checkedAt": "2026-10-26",
+      "rank": 26,
+      "benchScore": 77.1,
+      "benchRank": 26
+    },
+    {
+      "id": "gpt-5-6-terra",
+      "provider": "openai",
+      "label": "GPT-5.6 Terra",
+      "aliases": [
+        "gpt-5.6-terra"
+      ],
+      "currency": "USD",
+      "cacheHit": 0.2,
+      "cacheMiss": 2,
+      "output": 12,
+      "cacheWrite": 0,
+      "band": null,
+      "status": "unverified",
+      "cacheHitSource": "estimated",
+      "source": "benchgecko",
+      "checkedAt": "2026-10-26",
+      "rank": 28,
+      "benchScore": 75.3,
+      "benchRank": 28
+    },
+    {
+      "id": "kimi-k3",
+      "provider": "moonshot",
+      "label": "Kimi K3",
+      "aliases": [
+        "kimi-k3",
+        "kimi-k3-0901"
+      ],
+      "currency": "USD",
+      "cacheHit": 0.3,
+      "cacheMiss": 3,
+      "output": 15,
+      "cacheWrite": 3.6,
+      "band": null,
+      "status": "verified",
+      "cacheHitSource": "measured",
+      "source": "https://platform.kimi.com/docs/pricing/chat",
+      "checkedAt": "2026-10-27",
+      "rank": 54,
+      "note": "Moonshot 官方端点；缓存写入按 5min/1h TTL 分档，此处取 5min 档；聚合站最低至 $0.19/$8.11",
+      "tokenizerTaxPct": 93,
+      "benchScore": 65.8,
+      "benchRank": 54
+    },
+    {
+      "id": "gpt-5-5",
+      "provider": "openai",
+      "label": "GPT-5.5",
+      "aliases": [
+        "gpt-5.5"
+      ],
+      "currency": "USD",
+      "cacheHit": 0.5,
+      "cacheMiss": 5,
+      "output": 30,
+      "cacheWrite": 0,
+      "band": null,
+      "status": "unverified",
+      "cacheHitSource": "measured",
+      "source": "benchgecko",
+      "checkedAt": "2026-10-26",
+      "rank": 58,
+      "note": "flex 档 2.5/15",
+      "benchScore": 64.9,
+      "benchRank": 58
+    },
+    {
+      "id": "claude-sonnet-4-5",
+      "provider": "anthropic",
+      "label": "Claude Sonnet 4.5",
+      "aliases": [
+        "claude-sonnet-4-5-latest",
+        "claude-4-5-sonnet"
+      ],
+      "currency": "USD",
+      "cacheHit": 0.3,
+      "cacheMiss": 3,
+      "output": 15,
+      "cacheWrite": 3.75,
+      "band": null,
+      "status": "unverified",
+      "cacheHitSource": "estimated",
+      "source": "benchgecko",
+      "checkedAt": "2026-10-26",
+      "legacy": true
+    },
+    {
+      "id": "claude-opus-4-1",
+      "provider": "anthropic",
+      "label": "Claude Opus 4.1",
+      "aliases": [
+        "claude-opus-4-1-latest"
+      ],
+      "currency": "USD",
+      "cacheHit": 1.5,
+      "cacheMiss": 15,
+      "output": 75,
+      "cacheWrite": 18.75,
+      "band": null,
+      "status": "unverified",
+      "cacheHitSource": "estimated",
+      "source": "benchgecko",
+      "checkedAt": "2026-10-26",
+      "legacy": true
+    },
+    {
+      "id": "claude-haiku-4-5",
+      "provider": "anthropic",
+      "label": "Claude Haiku 4.5",
+      "aliases": [
+        "claude-haiku-4-5-latest"
+      ],
+      "currency": "USD",
+      "cacheHit": 0.1,
+      "cacheMiss": 1,
+      "output": 5,
+      "cacheWrite": 1.25,
+      "band": null,
+      "status": "unverified",
+      "cacheHitSource": "estimated",
+      "source": "benchgecko",
+      "checkedAt": "2026-10-26",
+      "legacy": true
+    },
+    {
+      "id": "gpt-5",
+      "provider": "openai",
+      "label": "GPT-5",
+      "aliases": [
+        "gpt-5-codex",
+        "gpt-5-chat"
+      ],
+      "currency": "USD",
+      "cacheHit": 0.125,
+      "cacheMiss": 1.25,
+      "output": 10,
+      "cacheWrite": 0,
+      "band": null,
+      "status": "unverified",
+      "cacheHitSource": "measured",
+      "source": "benchgecko",
+      "checkedAt": "2026-10-26",
+      "legacy": true
+    },
+    {
+      "id": "gpt-5-mini",
+      "provider": "openai",
+      "label": "GPT-5 mini",
+      "aliases": [
+        "gpt-5-mini-latest"
+      ],
+      "currency": "USD",
+      "cacheHit": 0.025,
+      "cacheMiss": 0.25,
+      "output": 2,
+      "cacheWrite": 0,
+      "band": null,
+      "status": "unverified",
+      "cacheHitSource": "estimated",
+      "source": "benchgecko",
+      "checkedAt": "2026-10-26",
+      "legacy": true
+    },
+    {
+      "id": "gemini-2-5-pro",
+      "provider": "google",
+      "label": "Gemini 2.5 Pro",
+      "aliases": [
+        "gemini-2.5-pro"
+      ],
+      "currency": "USD",
+      "cacheHit": 0.31,
+      "cacheMiss": 1.25,
+      "output": 10,
+      "cacheWrite": 0,
+      "band": null,
+      "status": "unverified",
+      "cacheHitSource": "estimated",
+      "source": "benchgecko",
+      "checkedAt": "2026-10-26",
+      "legacy": true
+    },
+    {
+      "id": "gemini-2-5-flash",
+      "provider": "google",
+      "label": "Gemini 2.5 Flash",
+      "aliases": [
+        "gemini-2.5-flash",
+        "gemini-2-5-flash-lite"
+      ],
+      "currency": "USD",
+      "cacheHit": 0.075,
+      "cacheMiss": 0.3,
+      "output": 2.5,
+      "cacheWrite": 0,
+      "band": null,
+      "status": "unverified",
+      "cacheHitSource": "estimated",
+      "source": "benchgecko",
+      "checkedAt": "2026-10-26",
+      "legacy": true
+    }
+  ],
+  "bands": {
+    "cn-business": {
+      "timezoneOffsetMinutes": 480,
+      "peakMultiplier": 2,
+      "offPeakMultiplier": 1,
+      "peakWindows": [
+        {
+          "weekdays": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "start": "09:00",
+          "end": "12:00"
+        },
+        {
+          "weekdays": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "start": "14:00",
+          "end": "18:00"
+        }
+      ],
+      "holidays": [],
+      "source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/"
+    }
+  },
+  "excludedTop30": [
+    {
+      "rank": 1,
+      "name": "Claude Mythos Preview",
+      "reason": "预览版，无公开报价"
+    },
+    {
+      "rank": 10,
+      "name": "Qwen2.5 72B Instruct Abliterated",
+      "reason": "社区微调权重，无 API 报价，且仅测过简单基准"
+    },
+    {
+      "rank": 11,
+      "name": "DeepSeek-V2 (MoE-236B)",
+      "reason": "2024 年模型，仅测过旧基准"
+    },
+    {
+      "rank": 17,
+      "name": "PaLM 2-L",
+      "reason": "已下线，无报价"
+    },
+    {
+      "rank": 22,
+      "name": "phi-3-small 7.4B",
+      "reason": "小模型，非 agent 场景"
+    },
+    {
+      "rank": 27,
+      "name": "Qwen2 7B Instruct",
+      "reason": "2024 年小模型，非 agent 场景"
+    },
+    {
+      "rank": 29,
+      "name": "gpt-oss-120b (free)",
+      "reason": "免费开源权重，无计价意义"
+    },
+    {
+      "rank": 30,
+      "name": "DeepSeek R1 Distill Qwen 14B",
+      "reason": "蒸馏小模型，无 API 报价"
+    }
+  ],
+  "extras": [
+    {
+      "id": "deepseek-search",
+      "label": "DeepSeek Search",
+      "currency": "CNY",
+      "unit": "per_1000_successful_requests",
+      "price": 5,
+      "effectiveFrom": "2026-11-01T00:00:00+08:00",
+      "note": "Harness / Claude Code / Codex 经 Server 端工具调用时此前免费",
+      "source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/"
+    },
+    {
+      "id": "deepseek-fetch",
+      "label": "DeepSeek Fetch",
+      "currency": "CNY",
+      "unit": "per_1000_successful_requests",
+      "price": 5,
+      "effectiveFrom": "2026-11-01T00:00:00+08:00",
+      "note": "同上",
+      "source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/"
+    }
+  ],
+  "languageNote": {
+    "source": "https://benchgecko.ai/model/kimi-k3 (Gecko Test: Tokenizer Tax, as of 2026-10-26)",
+    "unit": "同样内容，非英文比英文多消耗的 token 百分比；成本倍数 = 1 + pct/100",
+    "newTokenizerNote": "Claude 4.7+ 换新分词器：同文本比 Sonnet 4.6 及更早多约 30% token（来源 blog.laozhang.ai）"
+  },
+  "benchNote": "BenchGecko 归一化均分（各模型被测过的基准集合不同，跨模型比较需谨慎）· as of 2026-10-26"
+}

@@ -164,13 +164,14 @@ scripts/validate.mjs      清单与目录的静态校验
 skill/SKILL.md       给 Agent 用的技能：安装、改价、验收
 docs/                截图
 .github/workflows     CI：node --check + 价格块同步 + 校验
-
+```
 #### 开发
 ```markdown
 
 node scripts/gen-pricing.mjs --check   # 价格块是否同步
 node scripts/validate.mjs              # 清单 / id / 币种 / band 引用
 npm run check                          # 两者都跑
+
 ```
 #### 发布
 
@@ -184,7 +185,7 @@ git branch -M main
 git remote add origin https://github.com/<you>/dsh-usage-cost.git
 git push -u origin main
 ```
-发布前把 package.json 里的 <your-org>、<your-name>、LICENSE 的年份署名替换掉。
+发布前把 package.json 里的 `your-org`、`your-name`、LICENSE 的年份署名替换掉。
 
 ### License
 
